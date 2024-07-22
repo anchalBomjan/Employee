@@ -1,0 +1,26 @@
+<<h2>Staff List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Phone</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let staff of staffs">
+      <td>{{ staff.name }}</td>
+      <td>{{ staff.description }}</td>
+      <td>{{ staff.phone }}</td>
+      <td>{{ staff.salary }}</td>
+      <td>
+        <a [routerLink]="['/staffs/details', staff.guidId]">View</a>
+        <a [routerLink]="['/staffs/edit', staff.guidId]">Edit</a>
+        <button (click)="deleteStaff(staff.guidId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a routerLink="/staffs/create">Add New Staff</a>
