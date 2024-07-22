@@ -1,4 +1,4 @@
-<<h2>Staff List</h2>
+<!-- <<h2>Staff List</h2>
 <table>
   <thead>
     <tr>
@@ -23,4 +23,34 @@
     </tr>
   </tbody>
 </table>
-<a routerLink="/staffs/create">Add New Staff</a>
+<a routerLink="/staffs/create">Add New Staff</a> -->
+
+
+<h2>Staff List</h2>
+<table class="staff-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Phone</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let staff of staffs">
+      <td>{{ staff.name }}</td>
+      <td>{{ staff.description }}</td>
+      <td>{{ staff.phone }}</td>
+      <td>{{ staff.salary }}</td>
+      <td class="action-buttons">
+        <!-- <a [routerLink]="['/staffs/details', staff.guidId]" class="action-link">Edit</a>
+        <a [routerLink]="['/staffs/edit', staff.guidId]" class="action-link">View</a> -->
+        <a [routerLink]="['/staffs/details', staff.guidId]" class="action-link">View</a>
+        <a [routerLink]="['/staffs/edit', staff.guidId]" class="action-link">Edit</a>
+        <button (click)="deleteStaff(staff.guidId)" class="delete-button">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a routerLink="/staffs/create" class="add-button">Add New Staff</a>

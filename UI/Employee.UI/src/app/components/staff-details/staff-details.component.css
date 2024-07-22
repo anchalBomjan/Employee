@@ -1,4 +1,4 @@
-form {
+/* form {
     display: flex;
     flex-direction: column;
   }
@@ -23,5 +23,40 @@ form {
   
   button:hover {
     background-color: #007B9E;
+  }
+  
+   */
+   .title {
+    text-align: center;
+    color: #2c3e50; /* Dark Blue */
+    margin-bottom: 1rem;
+  }
+  
+  .staff-details-box {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 1.5rem;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background */
+  }
+  
+  .staff-details-box p {
+    margin: 0.5rem 0; /* Margin between paragraphs */
+    font-size: 1rem;
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #3498db; /* Blue color */
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
   }
   

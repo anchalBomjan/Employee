@@ -2,12 +2,17 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StaffService } from '../../services/staff.service';
 import { Staff } from '../../models/staff';
-
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @Component({
   selector: 'app-staff-edit',
   standalone: true,
-  imports: [FormsModule],
+  // imports: [FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule, HttpClientModule],
   templateUrl: './staff-edit.component.html',
   styleUrl: './staff-edit.component.css'
 })

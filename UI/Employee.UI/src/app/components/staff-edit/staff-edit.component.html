@@ -1,8 +1,28 @@
-<h2>Staff Details</h2>
-<!-- <div *ngIf="staff">
+
+
+<!-- <h2 class="title">Staff Details</h2>
+<div *ngIf="staff" class="staff-details-box">
   <p><strong>Name:</strong> {{ staff.name }}</p>
   <p><strong>Description:</strong> {{ staff.description }}</p>
   <p><strong>Phone:</strong> {{ staff.phone }}</p>
   <p><strong>Salary:</strong> {{ staff.salary }}</p>
 </div>
-<a routerLink="/staffs">Back to List</a> -->
+<a routerLink="/staffs" class="back-link">Back to List</a> -->
+
+
+<h2>Edit Staff</h2>
+<form (ngSubmit)="updateStaff()">
+  <label for="name">Name</label>
+  <input type="text" id="name" [(ngModel)]="staff.name" name="name" required>
+
+  <label for="description">Description</label>
+  <input type="text" id="description" [(ngModel)]="staff.description" name="description" required>
+
+  <label for="phone">Phone</label>
+  <input type="text" id="phone" [(ngModel)]="staff.phone" name="phone" required>
+
+  <label for="salary">Salary</label>
+  <input type="text" id="salary" [(ngModel)]="staff.salary" name="salary" required>
+
+  <button type="submit">Update</button>
+</form>

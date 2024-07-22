@@ -3,13 +3,18 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'; // Import Router
 import { StaffService } from '../../services/staff.service';
 import { Staff } from '../../models/staff';
+import { CommonModule } from '@angular/common';
+
+import { RouterModule } from '@angular/router';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-staff-details',
   standalone: true,
-  imports: [FormsModule],
+  imports:  [CommonModule, FormsModule, RouterModule, HttpClientModule],
   templateUrl: './staff-details.component.html',
   styleUrl: './staff-details.component.css'
 })

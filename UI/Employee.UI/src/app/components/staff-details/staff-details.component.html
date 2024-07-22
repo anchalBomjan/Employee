@@ -1,4 +1,4 @@
-<h2>Edit Staff</h2>
+<!-- <h2>Edit Staff</h2>
 <form (ngSubmit)="updateStaff()">
   <label for="name">Name</label>
   <input type="text" id="name" [(ngModel)]="staff.name" name="name" required>
@@ -13,4 +13,14 @@
   <input type="text" id="salary" [(ngModel)]="staff.salary" name="salary" required>
 
   <button type="submit">Update</button>
-</form>
+</form> -->
+
+
+<h2 class="title">Staff Details</h2>
+<div *ngIf="staff" class="staff-details-box">
+  <p><strong>Name:</strong> {{ staff.name }}</p>
+  <p><strong>Description:</strong> {{ staff.description }}</p>
+  <p><strong>Phone:</strong> {{ staff.phone }}</p>
+  <p><strong>Salary:</strong> {{ staff.salary }}</p>
+</div>
+<a routerLink="/staffs" class="back-link">Back to List</a>
